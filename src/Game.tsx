@@ -1,3 +1,4 @@
+import Controls from "./components/Controls";
 import Map from "./components/Maps";
 import Player from "./components/Player";
 import Scene from "./components/Scene";
@@ -10,6 +11,7 @@ export default function Game() {
         <Player />
         <Map />
       </Scene>
+      <Controls />
     </div>
   );
 }
