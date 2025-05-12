@@ -1,4 +1,4 @@
-import { tileSize } from "../constants";
+import { tileSize, tilesPerRow } from "../constants";
 
 type Props = {
   rowIndex: number;
@@ -9,7 +9,7 @@ export default function Grass({ rowIndex, children }: Props) {
   return (
     <group position-y={rowIndex * tileSize}>
       <mesh receiveShadow>
-        <boxGeometry args={[tileSize * tileSize, tileSize, 3]} />
+        <boxGeometry args={[tilesPerRow * tileSize, tileSize, 3]} />
         <meshLambertMaterial color={0xbaf455} flatShading />
       </mesh>
       {children}

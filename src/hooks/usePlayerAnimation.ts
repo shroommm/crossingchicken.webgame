@@ -43,7 +43,7 @@ function setPosition(player: Group, progress: number) {
 
     player.position.x = MathUtils.lerp(startX, endX, progress)
     player.position.y = MathUtils.lerp(startY, endY, progress)
-    player.position.z = Math.sin(progress * Math.PI) * 8
+    player.children[0].position.z = Math.sin(progress * Math.PI) * 8
 }
 
 function setRotation(player: Group, progress: number) {
@@ -54,8 +54,8 @@ function setRotation(player: Group, progress: number) {
     if (move == "right") endRotation = -Math.PI / 2
     if (move == "backward") endRotation = Math.PI
 
-    player.rotation.z = MathUtils.lerp(
-        player.rotation.z,
+    player.children[0].rotation.z = MathUtils.lerp(
+        player.children[0].rotation.z,
         endRotation,
         progress
     )
