@@ -1,0 +1,10 @@
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    font-size: 2em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.698);
+    color: white;
+}

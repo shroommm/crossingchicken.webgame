@@ -1,5 +1,4 @@
 import { maxTileIndex, minTileIndex } from "../constants";
-import { rows } from "../metadata";
 import { MoveDirection } from "../types";
 import { calculateFinalPosition } from "./calculateFinalPosition";
 import useMapStore from "../stores/map";

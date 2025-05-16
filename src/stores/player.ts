@@ -1,6 +1,7 @@
 import { MoveDirection } from "../types";
 import { endsUpInValidPosition } from "../utilities/endsUpInValidPosition";
 import useMapStore from "./map";
+import useGameStore from "./game";
 
 
 export const state: {
@@ -35,4 +36,6 @@ export function stepCompleted() {
     if (state.currentRow == useMapStore.getState().rows.length - 10) {
         useMapStore.getState().addRows();
     }
+
+    useGameStore.getState().updateScore(state.currentRow)
 }

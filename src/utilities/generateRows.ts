@@ -6,7 +6,8 @@ export function generateRows(amount: number): Row[] {
     const rows: Row[] = [];
 
     for (let i = 0; i < amount; i++) {
-        rows.push(generateRow());
+        const rowData = generateRow();
+        rows.push(rowData);
     }
 
     return rows;
